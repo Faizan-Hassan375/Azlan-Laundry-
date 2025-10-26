@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Azlan Laundry — Fast • Clean • Reliable</title>
+  <meta name="description" content="Fast and reliable laundry services — wash, dry clean, ironing, and home pickup/delivery.">
+  <style>
+    :root{--brand1:#4b6cb7;--brand2:#182848;--muted:#666}
+    *{box-sizing:border-box}
+    body{font-family:Helvetica, Arial, sans-serif;margin:0;background:linear-gradient(135deg,var(--brand1),var(--brand2));color:#fff;min-height:100vh}
+    header{background:rgba(255,255,255,0.1);backdrop-filter:blur(6px);padding:20px 0;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+    .container{max-width:1100px;margin:0 auto;padding:20px}
+    nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+    .logo-area{display:flex;align-items:center;gap:10px}
+    .logo svg{width:38px;height:38px;fill:#fff}
+    .logo-text{font-weight:700;font-size:22px;letter-spacing:0.5px}
+    .tagline{font-size:12px;color:#e0e0e0;margin-top:-4px}
+    .nav-links{display:flex;gap:14px}
+    .nav-links a{color:#fff;text-decoration:none;font-weight:500;transition:opacity .2s}
+    .nav-links a:hover{opacity:.8}
+    .btn{background:#fff;color:var(--brand2);padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600;transition:0.2s}
+    .btn:hover{background:#f0f0f0}
+    .card{background:rgba(255,255,255,0.1);border-radius:12px;padding:18px;box-shadow:0 6px 20px rgba(15,23,42,0.2)}
+    .hero{display:flex;gap:30px;align-items:center;padding:60px 0;flex-wrap:wrap}
+    .hero h1{font-size:32px;margin:0 0 14px;color:#fff}
+    .hero p{margin:0 0 20px;color:#e0e0e0;line-height:1.5}
+    .services,.pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:18px}
+    form{display:grid;gap:10px}
+    input,select,textarea{padding:10px;border:none;border-radius:8px}
+    input:focus,select:focus,textarea:focus{outline:2px solid var(--brand1)}
+    footer{padding:20px 0;text-align:center;color:#ccc;font-size:14px;margin-top:40px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo-area">
+          <div class="logo">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M32 2C20 16 12 28 12 40c0 12 9 22 20 22s20-10 20-22C52 28 44 16 32 2zm0 56c-9.94 0-18-8.06-18-18 0-9.35 6.78-19.37 17.5-32.88C42.22 20.63 50 30.65 50 40c0 9.94-8.06 18-18 18z"/></svg>
+          </div>
+          <div>
+            <div class="logo-text">Azlan Laundry</div>
+            <div class="tagline">Fast • Clean • Reliable</div>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
+          <a class="btn" href="#book">Book Now</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div style="flex:1;min-width:280px">
+        <h1>Professional Laundry Services You Can Trust</h1>
+        <p>Azlan Laundry offers premium washing, dry cleaning, and ironing with convenient home pickup and delivery. Simple online booking, fast turnaround, and guaranteed freshness!</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn" href="#book">Book Now</a>
+          <a href="#pricing" style="align-self:center;text-decoration:none;color:#fff;font-weight:600">View Pricing</a>
+        </div>
+      </div>
+      <div style="flex:1;min-width:280px">
+        <div class="card">
+          <h2>Book a Pickup</h2>
+          <p style="color:#e0e0e0">Fill out the form to schedule your laundry pickup. We'll handle the rest.</p>
+          <form id="bookingForm">
+            <label>Name</label>
+            <input type="text" id="name" required placeholder="Full Name">
+            <label>Phone Number</label>
+            <input type="tel" id="phone" required placeholder="03XXXXXXXXX">
+            <label>Service</label>
+            <select id="service">
+              <option>Wash & Dry</option>
+              <option>Dry Clean</option>
+              <option>Ironing</option>
+              <option>Clothing Repair</option>
+            </select>
+            <label>Pickup Date</label>
+            <input type="date" id="date" required>
+            <label>Address</label>
+            <textarea id="address" rows="2" placeholder="Home Address"></textarea>
+            <button type="submit" class="btn">Submit Booking</button>
+          </form>
+          <p id="formMsg" style="color:#90ee90;display:none;margin-top:10px">Thank you! Your booking has been received — we'll contact you soon.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="services">
+        <div class="card">
+          <h3>Wash & Dry</h3>
+          <p>Affordable, fast, and hygienic washing for everyday clothes.</p>
+        </div>
+        <div class="card">
+          <h3>Dry Cleaning</h3>
+          <p>Perfect for suits, dresses, and delicate fabrics.</p>
+        </div>
+        <div class="card">
+          <h3>Ironing & Finishing</h3>
+          <p>Get your clothes neat, pressed, and ready to wear.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <h2>Pricing (Sample)</h2>
+      <div class="pricing">
+        <div class="card">
+          <h3>Basic Plan</h3>
+          <p>Wash & Dry - per kg</p>
+          <p style="font-weight:700">₨ 120 / kg</p>
+        </div>
+        <div class="card">
+          <h3>Premium Plan</h3>
+          <p>Dry Clean - per item</p>
+          <p style="font-weight:700">₨ 250 / item</p>
+        </div>
+        <div class="card">
+          <h3>Ironing</h3>
+          <p>Sheets, shirts, and suits</p>
+          <p style="font-weight:700">Variable</p>
+        </div>
+      </div>
+      <p style="color:#ddd">Note: Prices are indicative — may vary by area or garment type.</p>
+    </section>
+
+    <section id="faq" style="margin-top:20px">
+      <h2>Frequently Asked Questions</h2>
+      <div style="display:grid;gap:8px">
+        <div class="card"><strong>Is pickup free?</strong><p>Usually yes, but a small fee may apply in certain areas.</p></div>
+        <div class="card"><strong>How can I pay?</strong><p>Cash on delivery or online payment via bank transfer or mobile wallet.</p></div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:20px">
+      <h2>Contact Us</h2>
+      <div class="card">
+        <p>Phone: 03XXXXXXXXX</p>
+        <p>Email: info@azlanlaundry.example</p>
+        <p>Address: Your service area — include a map or pin here.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <small>© <span id="year"></span> Azlan Laundry. All rights reserved. | Fast • Clean • Reliable</small>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('bookingForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const date = document.getElementById('date').value;
+      if(!name || !phone || !date){
+        alert('Please fill in all required fields.');
+        return;
+      }
+      document.getElementById('formMsg').style.display = 'block';
+      setTimeout(()=>{document.getElementById('bookingForm').reset();},1200);
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

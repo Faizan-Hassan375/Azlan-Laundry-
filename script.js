@@ -1,0 +1,1 @@
+alert("G kasi lagi mamu g ya website")

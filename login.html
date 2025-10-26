@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        /* --- Reset & Background --- */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('images/images\ \(1\).jpg') no-repeat center center/cover;
+            font-family: Arial, sans-serif;
+        }
+
+        /* --- Login Box --- */
+        .login {
+            border: 1px solid rgba(255,255,255,0.2);
+            width: 400px;
+            height: 400px;
+            color: #fff;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(0,0,0,0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .login:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 30px rgba(0,0,0,0.8);
+        }
+
+        /* --- Form Styles --- */
+        form {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 26px;
+            text-align: center;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        label {
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        input {
+            background: rgba(255, 255, 255, 0.2);
+            height: 40px;
+            border-radius: 20px;
+            padding: 0 15px;
+            border: none;
+            outline: none;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        input::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+
+        button {
+            background: rgb(45, 126, 231);
+            height: 45px;
+            border-radius: 40px;
+            border: none;
+            margin-top: 10px;
+            color: white;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: rgb(35, 106, 211);
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <form action="index.html" method="get">
+            <h1>Log In</h1>
+            <label for="user">Username</label>
+            <input type="text" id="user" placeholder="Enter your username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
